@@ -263,7 +263,7 @@ body.menu-expanded #close-meu svg path{
 section{
     padding: 10rem 0;
 }
-#services header h4{
+/* #services header h4{
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 2.1rem;
@@ -277,7 +277,7 @@ section{
     text-align: center;
     color: var(--Secondary-colors-headline);
     margin-bottom: 6rem;
-}
+} */
 
 #services .cards{
     display: flex;
@@ -294,7 +294,29 @@ section{
     border-radius: 6px;
     padding: 2.4rem;
 }
-
+section header h4{
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: var(--second-bg-color);
+    margin-bottom: 1.6rem;
+}
+section header h2{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+    color: var(--Secondary-colors-headline);
+    margin-bottom: 6rem;
+}
+/*Sobre nos »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+#about .content p{
+    margin: 2.4rem 0 6rem;
+}
+#about .content img{
+    max-width: 33rem;
+    width: 95vw;
+}
 /*Aniimaçoes«»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
 @keyframes leftToRigth{/* animaçao para botao menu*/
     0%{transform: translateX(-100%);
