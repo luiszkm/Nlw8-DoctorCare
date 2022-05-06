@@ -47,7 +47,7 @@ body{
     min-height: 31rem;
 }
 /*Header »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
-header{
+#homer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +55,7 @@ header{
     gap: 1.6rem;
     padding-top: var(--nav-heigth);
 }
-header::before{
+#homer::before{
     content: "";
     z-index: -1;
     width: 100vw;
@@ -67,7 +67,7 @@ header::before{
     background-color: var(--primary-bg-color);
 }
 
-header h1{
+#homer h1{
 font-weight: 700;
 font-size: 3.4rem;
 line-height: 4.4rem;
@@ -75,18 +75,18 @@ text-align: center;
 margin-top: 0.8rem;
 color: var(--Secondary-colors-headline);
 }
-header p:first-child{
+#homer p:first-child{
 font-size: 18px;
 line-height: 2.7rem;
 text-align: center;
 color: var(--secondary-Color);
 }
-header h4:first-child{
+#homer h4:first-child{
 font-size: 1.8rem;
 line-height: 2.7rem;
 text-align: center;
 }
-header button{
+#homer button{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -101,7 +101,7 @@ header button{
     margin-top: 1.6rem;
     
 }
-header .image-logo{
+#homer .image-logo{
     display: block;
     object-position: 0 2rem;
 
@@ -145,7 +145,7 @@ nav{
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    
+    z-index: 100;
     
 }
 .wrapper{
@@ -249,7 +249,7 @@ body.menu-expanded #close-meu svg path{
     line-height: 2.3rem;
     text-transform: uppercase;
     margin-bottom: 9.6rem;
-   animation: leftToRigth 800ms 300ms backwards;
+   animation: leftToRigth 1000ms 300ms backwards;
 
 }
 

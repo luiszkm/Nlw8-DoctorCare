@@ -30,3 +30,21 @@ function onscroll (){
     nav.classList.remove('scroll')
   }
 }
+
+
+
+
+
+
+
+
+
+ScrollReveal({
+ origin: 'top',
+ distance: '50px',
+ duration: 3000,
+}).reveal(`#homer, #homer img,
+ #homer . stats,
+ #services,
+ #services header ,
+ #services .card`);
