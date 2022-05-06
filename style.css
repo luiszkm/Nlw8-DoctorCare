@@ -214,9 +214,10 @@ body.menu-expanded #close-meu svg path{
     position: fixed;
     top: 0;
     left: 0;
-  
+    animation: downToUpper 360ms 100ms backwards;
     
 }
+
 .hide{
     display: none;
 }
@@ -248,8 +249,10 @@ body.menu-expanded #close-meu svg path{
     line-height: 2.3rem;
     text-transform: uppercase;
     margin-bottom: 9.6rem;
-   
+   animation: leftToRigth 800ms 300ms backwards;
+
 }
+
 .socila-links{ 
     display: flex;
     gap: 3.2rem;
@@ -290,4 +293,25 @@ section{
     border: 1px solid #DCE9E2;
     border-radius: 6px;
     padding: 2.4rem;
+}
+
+/*Aniimaçoes«»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+@keyframes leftToRigth{/* animaçao para botao menu*/
+    0%{transform: translateX(-100%);
+    opacity: 0;}
+    50%{
+        opacity: 0.4;
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes downToUpper {/*animacao para expancao do menu*/
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+
+    }
 }
