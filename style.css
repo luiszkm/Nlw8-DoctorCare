@@ -150,7 +150,6 @@ nav{
 }
 .wrapper{
     display: flex;
-    max-width: 32rem;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
@@ -314,9 +313,9 @@ section header h2{
 #about .content p{
     margin: 2.4rem 0 6rem;
 }
-img{
-    
-    width:95vw;
+#about .content img{
+    max-width: 33rem;
+    width: 90vw;
 }
 /*Aniimaçoes«»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
 @keyframes leftToRigth{/* animaçao para botao menu*/
