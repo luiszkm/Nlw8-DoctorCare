@@ -12,11 +12,12 @@
     --text-white: #FFFFFF;
     --tc-menu:#FFFAF1;
 
-    --hue-primary: 170;
+    --hue-primary: 10;
     --primary-bg-color: hsl(var(--hue-primary), 23%, 89%);
     --second-bg-color: hsl(var(--hue-primary), 100%, 26%);/*cor masi escura pra contraste*/
+    --hover-button: hsla(var(--hue-primary), 100%, 14%, 1);
 
-    --hue-secondary: 210;
+    --hue-secondary: calc(--hue-primary + 40);
     --secondary-Color: hsl(var(--hue-secondary), 9%, 31%);/* cor dos paragrafos*/
     --Secondary-colors-headline:hsl(var(--hue-secondary), 11%, 15%);/*cor dos H*/
     
@@ -38,13 +39,74 @@ body{
     
     
 }
-
+/*geral »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
 .page{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     min-height: 31rem;
+}
+section{
+    padding: 10rem 0;
+}
+section header h2{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    text-align: center;
+    color: var(--Secondary-colors-headline);
+    margin-bottom: 6rem;
+}
+section header h4{
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: var(--second-bg-color);
+    margin-bottom: 1.6rem;
+}
+.hide{
+    display: none;
+}
+.wrapper{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.6rem 2.4rem;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    text-transform: uppercase;
+    background-color: var(--second-bg-color);
+    color: var(--text-white);
+    min-width: 263px;
+    min-height: 52px;
+    border-radius: 4rem;
+    margin-top: 1.6rem;
+    cursor: pointer;
+    
+}
+.button:hover{
+    background-color: var(--hover-button);
+    transition: 700ms;
+}
+img{
+    max-width: 33rem;
+    width: 90vw;
+}
+.content{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.6rem 2.4rem;
 }
 /*Header »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
 #homer{
@@ -74,6 +136,7 @@ line-height: 4.4rem;
 text-align: center;
 margin-top: 0.8rem;
 color: var(--Secondary-colors-headline);
+margin-bottom: 2.4rem;
 }
 #homer p:first-child{
 font-size: 18px;
@@ -86,21 +149,7 @@ font-size: 1.8rem;
 line-height: 2.7rem;
 text-align: center;
 }
-#homer button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 32px;
-    text-transform: uppercase;
-    background-color: var(--second-bg-color);
-    color: var(--text-white);
-    min-width: 263px;
-    min-height: 52px;
-    border-radius: 4rem;
-    margin-top: 1.6rem;
-    
-}
+
 #homer .image-logo{
     display: block;
     object-position: 0 2rem;
@@ -148,14 +197,7 @@ nav{
     z-index: 100;
     
 }
-.wrapper{
-    display: flex;
-    width: 100vw;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    padding: 1.6rem 2.4rem;
-}
+
 nav .wrapper{
     display: flex;
     flex-direction: row;
@@ -218,9 +260,6 @@ body.menu-expanded #close-meu svg path{
     
 }
 
-.hide{
-    display: none;
-}
 #menu ul:first-child{
     margin-top: 6rem;
     font-weight: 700;
@@ -252,7 +291,12 @@ body.menu-expanded #close-meu svg path{
    animation: leftToRigth 1000ms 300ms backwards;
 
 }
-
+#menu a button:hover{
+    background-color: var(--second-bg-color);
+    color: var(--text-white);
+    filter: brightness(1.2);
+    box-shadow: 0px 0px 10px 3px hsla(0, 0%, 100%, 0.8);
+}
 .socila-links{ 
     display: flex;
     gap: 3.2rem;
@@ -260,9 +304,7 @@ body.menu-expanded #close-meu svg path{
     justify-content: center;
 }
 /*Seção de serviços, primeira section »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
-section{
-    padding: 10rem 0;
-}
+
 /* #services header h4{
     font-weight: 700;
     font-size: 1.4rem;
@@ -294,29 +336,110 @@ section{
     border-radius: 6px;
     padding: 2.4rem;
 }
-section header h4{
-    font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 2.1rem;
-    color: var(--second-bg-color);
-    margin-bottom: 1.6rem;
-}
-section header h2{
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 39px;
-    text-align: center;
-    color: var(--Secondary-colors-headline);
-    margin-bottom: 6rem;
-}
+
 /*Sobre nos »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+#about header h2{
+    text-align: left;
+}
 #about .content p{
     margin: 2.4rem 0 6rem;
 }
-#about .content img{
-    max-width: 33rem;
-    width: 90vw;
+
+/*Contatop »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+#contact header{
+    margin-bottom: 3.2rem;
 }
+#contact header h2{
+    text-align: left;
+}
+#contact ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+#contact ul li{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+#contact .content{
+    gap: 3.2rem;
+}
+#contact .content img{
+    margin-top: 2.8rem;
+}
+/*footer*/
+footer{
+    background-color: var(--second-bg-color);
+    padding: 6rem 0;
+}
+footer p{
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: var(--text-white);
+}
+footer a img{
+    max-width: 23.6rem;
+    height: 3.1rem;
+    margin-bottom: 2.4rem;
+}
+.footer-wrapper{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding: 1.6rem 2.4rem;
+
+}
+.footer-wrapper ul.social-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 3.2rem;
+}
+
+#backToTopButton {
+    position: fixed;
+    z-index: 44;
+    bottom: 1rem;
+    right: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#backToTopButton.show{
+    opacity: 1;
+    visibility: visible;
+}
+/*Custom colors »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+
+#backToTopButton svg circle
+{
+    fill: var(--second-bg-color);
+}
+
+#open-menu svg path,
+#contact ul li svg path
+{
+    stroke: var(--second-bg-color);
+}
+#services .card svg circle{
+    fill: var(--primary-bg-color);
+}
+#services .card svg path{
+    stroke: var(--second-bg-color);
+}
+.navigation .logo svg path:nth-last-child(-n +4){
+    fill: var(--second-bg-color);}
+    nav.scroll .logo svg path:nth-last-child(-n +4){
+        fill: white;
+        
+    }
+ 
 /*Aniimaçoes«»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
 @keyframes leftToRigth{/* animaçao para botao menu*/
     0%{transform: translateX(-100%);
